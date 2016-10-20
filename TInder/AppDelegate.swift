@@ -18,8 +18,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
+        if let _ = NSUserDefaults.standardUserDefaults().objectForKey("userUID") as? String{
+//            if let user = FIRAuth.auth()?.currentUser{
+//                if !user.emailVerified{
+//                    let alertVC = UIAlertController(title: "Error", message: "Sorry. Your email address has not yet been verified. Please Verifiec your email address first", preferredStyle: .Alert)
+//                    let alertActionOkay = UIAlertAction(title: "Okay", style: .Default) {
+//                        (_) in
+//                        user.sendEmailVerificationWithCompletion(nil)
+//                    }
+//                    alertVC.addAction(alertActionOkay)
+//                    self.window?.rootViewController = alertVC
+//                }else{
+            
+                // load storyboard
+                let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                // load view controller with the storyboardID of HomeTabBarController
+                let viewController = storyBoard.instantiateViewControllerWithIdentifier("CardView")
+                
+                self.window?.rootViewController = viewController
+//                }
+            
+//            }}
+        }
         return true
     }
+        
+        
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

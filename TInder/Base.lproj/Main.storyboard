@@ -62,10 +62,33 @@
                     <connections>
                         <outlet property="emailTextField" destination="9Qe-bc-6xh" id="oRp-Vk-xAM"/>
                         <outlet property="passwordTextField" destination="Zud-e6-kGu" id="nup-Aw-ACU"/>
+                        <segue destination="vPu-Ot-h2y" kind="presentation" identifier="CardSegue" id="FxJ-JT-f75"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Cards-->
+        <scene sceneID="ZKc-9U-sCO">
+            <objects>
+                <viewController id="qJK-PX-HiL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="auz-hz-wPH"/>
+                        <viewControllerLayoutGuide type="bottom" id="g0r-P7-auS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dLR-de-eEc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cards" id="f4h-Ae-gOe">
+                        <barButtonItem key="leftBarButtonItem" title="Profile" id="9ni-eB-oBj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Match List" id="vuw-cR-zo4"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p1v-sg-NbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919" y="495"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="YaS-TS-mHD">
@@ -141,15 +164,122 @@
                         <outlet property="emailTextField" destination="5gT-nc-ESo" id="8jK-Ks-qyx"/>
                         <outlet property="nameTextField" destination="Cif-Ng-iob" id="Gsx-HW-xvG"/>
                         <outlet property="passwordTextField" destination="nu8-qH-pOx" id="9Sd-3E-ahl"/>
+                        <segue destination="sU0-kw-s8n" kind="presentation" identifier="MoreInfoSegue" id="X9Y-ZG-hAB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWr-Zz-Jnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="e8o-bd-c5q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="140" y="858"/>
+            <point key="canvasLocation" x="140" y="884"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wGv-bv-jBY">
+            <objects>
+                <navigationController storyboardIdentifier="CardView" automaticallyAdjustsScrollViewInsets="NO" id="vPu-Ot-h2y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qMS-NU-CHo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qJK-PX-HiL" kind="relationship" relationship="rootViewController" id="RuT-uV-BVH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LZ8-50-QG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107" y="495"/>
+        </scene>
+        <!--More Info View Controller-->
+        <scene sceneID="VKk-we-PAs">
+            <objects>
+                <viewController id="sU0-kw-s8n" customClass="MoreInfoViewController" customModule="TInder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rMb-bA-wFa"/>
+                        <viewControllerLayoutGuide type="bottom" id="EyU-Lq-uKr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4tI-Ae-9Sx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="d8T-ja-WV1">
+                                <rect key="frame" x="225" y="57" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Lb5-qM-XiE"/>
+                                    <constraint firstAttribute="height" constant="150" id="iev-tG-n79"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRQ-Fy-cFU">
+                                <rect key="frame" x="277" y="252" width="47" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VP7-nA-GPS">
+                                <rect key="frame" x="180" y="290" width="240" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Oht-an-GDH"/>
+                                    <constraint firstAttribute="width" constant="240" id="mwa-pb-wKo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pct-Qs-l9K">
+                                <rect key="frame" x="269" y="550" width="62" height="30"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="continueButton:" destination="sU0-kw-s8n" eventType="touchUpInside" id="ATu-lJ-L7O"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us more about you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iS1-kk-TfI">
+                                <rect key="frame" x="214" y="20" width="173" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5FR-tI-0Lg">
+                                <rect key="frame" x="242" y="398" width="117" height="29"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EyU-Lq-uKr" firstAttribute="top" secondItem="pct-Qs-l9K" secondAttribute="bottom" constant="20" id="3rP-2s-Ag2"/>
+                            <constraint firstItem="pct-Qs-l9K" firstAttribute="centerX" secondItem="4tI-Ae-9Sx" secondAttribute="centerX" id="BLa-hE-Shj"/>
+                            <constraint firstItem="d8T-ja-WV1" firstAttribute="top" secondItem="iS1-kk-TfI" secondAttribute="bottom" constant="16" id="FpT-z3-nY9"/>
+                            <constraint firstItem="d8T-ja-WV1" firstAttribute="centerX" secondItem="4tI-Ae-9Sx" secondAttribute="centerX" id="Pt7-XG-svt"/>
+                            <constraint firstItem="iS1-kk-TfI" firstAttribute="centerX" secondItem="4tI-Ae-9Sx" secondAttribute="centerX" id="WUU-sN-uVc"/>
+                            <constraint firstItem="dRQ-Fy-cFU" firstAttribute="centerX" secondItem="4tI-Ae-9Sx" secondAttribute="centerX" id="aLG-Jl-4Td"/>
+                            <constraint firstItem="5FR-tI-0Lg" firstAttribute="top" secondItem="VP7-nA-GPS" secondAttribute="bottom" constant="8" id="bWv-xY-3xQ"/>
+                            <constraint firstItem="VP7-nA-GPS" firstAttribute="top" secondItem="dRQ-Fy-cFU" secondAttribute="bottom" constant="8" id="fba-Kh-IWo"/>
+                            <constraint firstItem="iS1-kk-TfI" firstAttribute="top" secondItem="rMb-bA-wFa" secondAttribute="bottom" id="gQm-uR-vjT"/>
+                            <constraint firstItem="dRQ-Fy-cFU" firstAttribute="top" secondItem="d8T-ja-WV1" secondAttribute="bottom" constant="45" id="iuR-qZ-0gF"/>
+                            <constraint firstItem="5FR-tI-0Lg" firstAttribute="centerX" secondItem="4tI-Ae-9Sx" secondAttribute="centerX" id="lpz-Uv-47t"/>
+                            <constraint firstItem="VP7-nA-GPS" firstAttribute="centerX" secondItem="4tI-Ae-9Sx" secondAttribute="centerX" id="n1h-uK-YSu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="dRQ-Fy-cFU" id="pAr-2M-Ohm"/>
+                        <outlet property="continueButton" destination="pct-Qs-l9K" id="TbC-ql-9CM"/>
+                        <outlet property="descriptionTextView" destination="VP7-nA-GPS" id="NlT-Ko-SSQ"/>
+                        <outlet property="gender" destination="5FR-tI-0Lg" id="9J9-Hv-jAh"/>
+                        <outlet property="profileImage" destination="d8T-ja-WV1" id="tah-HX-9CV"/>
+                        <segue destination="vPu-Ot-h2y" kind="presentation" identifier="CardSegue" id="jXa-n0-kj4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vut-ZP-Hgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="1627"/>
         </scene>
     </scenes>
     <resources>
         <image name="Tinder 1x" width="244" height="141"/>
+        <image name="picture" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jXa-n0-kj4"/>
+    </inferredMetricsTieBreakers>
 </document>
