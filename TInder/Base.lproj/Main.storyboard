@@ -79,7 +79,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Cards-->
+        <!--Cards View Controller-->
         <scene sceneID="ZKc-9U-sCO">
             <objects>
                 <viewController id="qJK-PX-HiL" customClass="CardsViewController" customModule="TInder" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,10 +91,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-sY-ZH1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-sY-ZH1" userLabel="CardView">
                                 <rect key="frame" x="20" y="84" width="560" height="436"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bar-Id-rOh">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bar-Id-rOh">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="353"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="353" id="l69-2Q-64h"/>
@@ -113,7 +113,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-BN-IVi">
-                                        <rect key="frame" x="8" y="395" width="88" height="21"/>
+                                        <rect key="frame" x="20" y="395" width="520" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -123,9 +123,10 @@
                                 <constraints>
                                     <constraint firstItem="bar-Id-rOh" firstAttribute="top" secondItem="SdF-sY-ZH1" secondAttribute="top" id="16K-Cb-mLZ"/>
                                     <constraint firstItem="bar-Id-rOh" firstAttribute="centerX" secondItem="SdF-sY-ZH1" secondAttribute="centerX" id="3tZ-8p-AqE"/>
-                                    <constraint firstItem="SVT-BN-IVi" firstAttribute="leading" secondItem="SdF-sY-ZH1" secondAttribute="leading" constant="8" id="5DA-Rj-3TX"/>
+                                    <constraint firstItem="SVT-BN-IVi" firstAttribute="leading" secondItem="SdF-sY-ZH1" secondAttribute="leading" constant="20" id="5DA-Rj-3TX"/>
                                     <constraint firstItem="fQ0-SP-pi4" firstAttribute="top" secondItem="bar-Id-rOh" secondAttribute="bottom" constant="13" id="GiD-md-kME"/>
                                     <constraint firstItem="bar-Id-rOh" firstAttribute="leading" secondItem="SdF-sY-ZH1" secondAttribute="leading" id="L3s-o8-xGb"/>
+                                    <constraint firstAttribute="trailing" secondItem="SVT-BN-IVi" secondAttribute="trailing" constant="20" id="Xub-Tz-Qth"/>
                                     <constraint firstItem="Syu-NG-Pa1" firstAttribute="top" secondItem="bar-Id-rOh" secondAttribute="bottom" constant="8" id="aEE-5f-kfn"/>
                                     <constraint firstItem="SVT-BN-IVi" firstAttribute="top" secondItem="Syu-NG-Pa1" secondAttribute="bottom" constant="7" id="lQ1-d3-eAy"/>
                                     <constraint firstAttribute="trailing" secondItem="bar-Id-rOh" secondAttribute="trailing" id="qBf-yC-ueE"/>
@@ -133,22 +134,30 @@
                                     <constraint firstItem="Syu-NG-Pa1" firstAttribute="leading" secondItem="SdF-sY-ZH1" secondAttribute="leading" constant="8" id="wj9-sH-zLe"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1b4-zu-xsb">
-                                <rect key="frame" x="140" y="538" width="37" height="30"/>
-                                <state key="normal" title="Nope"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1b4-zu-xsb">
+                                <rect key="frame" x="140" y="538" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="x5g-Zt-8UP"/>
+                                    <constraint firstAttribute="width" constant="40" id="xft-Nq-qGO"/>
+                                </constraints>
+                                <state key="normal" image="Unsaved 1x"/>
                                 <connections>
                                     <action selector="onNopeButtonPressed:" destination="qJK-PX-HiL" eventType="touchUpInside" id="vD5-a9-8RJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f51-bx-epw">
-                                <rect key="frame" x="420" y="538" width="40" height="30"/>
-                                <state key="normal" title="Yasss"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f51-bx-epw">
+                                <rect key="frame" x="420" y="538" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="vbK-WC-z2L"/>
+                                    <constraint firstAttribute="height" constant="40" id="z1T-fM-PWZ"/>
+                                </constraints>
+                                <state key="normal" image="Save 1x"/>
                                 <connections>
                                     <action selector="onYasButtonPressed:" destination="qJK-PX-HiL" eventType="touchUpInside" id="fyo-tN-E05"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="SdF-sY-ZH1" secondAttribute="bottom" constant="80" id="0n2-zb-tIH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f51-bx-epw" secondAttribute="trailing" constant="120" id="TwM-TI-Hfr"/>
@@ -160,13 +169,15 @@
                             <constraint firstItem="SdF-sY-ZH1" firstAttribute="top" secondItem="auz-hz-wPH" secondAttribute="bottom" constant="20" id="zDy-o9-8eo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Cards" id="f4h-Ae-gOe">
+                    <navigationItem key="navigationItem" id="f4h-Ae-gOe">
                         <barButtonItem key="leftBarButtonItem" title="Profile" id="9ni-eB-oBj">
+                            <color key="tintColor" red="0.93725490199999995" green="0.41568627450000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="UKV-dG-GPh" kind="show" id="cnJ-CF-0PW"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Match List" id="vuw-cR-zo4">
+                            <color key="tintColor" red="0.93725490199999995" green="0.41568627450000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="JV4-Am-l9g" kind="show" id="z8T-63-pKi"/>
                             </connections>
@@ -174,6 +185,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ageLabel" destination="fQ0-SP-pi4" id="F2f-82-95h"/>
+                        <outlet property="cardView" destination="SdF-sY-ZH1" id="XPO-bn-h6z"/>
                         <outlet property="descriptionLabel" destination="SVT-BN-IVi" id="YeH-Fh-aLB"/>
                         <outlet property="imageView" destination="bar-Id-rOh" id="Z1P-Xi-x2W"/>
                         <outlet property="nameLabel" destination="Syu-NG-Pa1" id="K5X-HO-SMZ"/>
@@ -247,6 +259,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="BFT-D6-Klo">
                         <barButtonItem key="rightBarButtonItem" title="Sign Out" id="RYF-kL-n4P">
+                            <color key="tintColor" red="0.93725490199999995" green="0.41568627450000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onSignOutbutton:" destination="UKV-dG-GPh" id="wbx-XR-hkp"/>
                             </connections>
@@ -455,7 +468,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Save 1x" width="60" height="60"/>
         <image name="Tinder 1x" width="244" height="141"/>
+        <image name="Unsaved 1x" width="60" height="60"/>
         <image name="picture" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
