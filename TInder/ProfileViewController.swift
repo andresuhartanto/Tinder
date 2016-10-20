@@ -28,21 +28,11 @@ class ProfileViewController: UIViewController {
             if let user = User.init(snapshot: userSnap){
                 self.nameLabel.text = user.name
                 self.descriptionLabel.text = user.description
+                let photoURL = user.photoURL
+                self.profileImage.sd_setImageWithURL(NSURL(string: photoURL!))
             }
-        
-        
         })
-        
-        
-        
-        DataService.usersRef.child(User.currentUserUid).child("profile_photo").child("profile_photo_url").observeEventType(.Value, withBlock: {(photoURLSnap) in
-            let photoURL = photoURLSnap.value as! String
-            self.profileImage.sd_setImageWithURL(NSURL(string:photoURL))
-            self.profileImage.layer.cornerRadius = 25
-            
-        
-        })
-    }
+        }
     
     
     @IBAction func onSignOutbutton(sender: UIBarButtonItem) {

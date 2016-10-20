@@ -21,12 +21,30 @@ class CardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        loadUsers()
 
     }
     
     func loadUsers(){
-        DataService.
+        DataService.usersRef.observeEventType(.ChildAdded, withBlock: {(usersSnap) in
+            DataService.usersRef.child(usersSnap.key).observeEventType(.Value, withBlock: {(aUserSnap) in
+                if let user = User.init(snapshot: aUserSnap){
+                    self.cards.append(user)
+                    self.populateCard()
+                }
+            })
+        })
+    }
+    
+    func populateCard(){
+        
+        for card in cards{
+        let photoURL = card.photoURL
+        self.imageView.sd_setImageWithURL(NSURL(string: photoURL!))
+        self.nameLabel.text = card.name
+        self.ageLabel.text = String(card.age)
+        self.descriptionLabel.text = card.description
+        }
     }
     
     @IBAction func onNopeButtonPressed(sender: UIButton) {

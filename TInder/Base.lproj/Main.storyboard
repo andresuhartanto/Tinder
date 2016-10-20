@@ -19,18 +19,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Qe-bc-6xh">
-                                <rect key="frame" x="272" y="322" width="56" height="30"/>
+                                <rect key="frame" x="200" y="322" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="u3D-7d-K2X"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-e6-kGu">
-                                <rect key="frame" x="258" y="360" width="84" height="30"/>
+                                <rect key="frame" x="200" y="360" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="zdA-mz-49M"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8M-2x-Qqa">
                                 <rect key="frame" x="277" y="428" width="47" height="30"/>
-                                <state key="normal" title="Sign In"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.41568627450000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="onSignInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j6S-GJ-q8S"/>
                                 </connections>
@@ -40,7 +48,9 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jn8-CE-bbb">
                                 <rect key="frame" x="220" y="550" width="161" height="30"/>
-                                <state key="normal" title="Don't have an account?"/>
+                                <state key="normal" title="Don't have an account?">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.41568627450000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="47O-ls-IfI" kind="presentation" id="w0b-OI-D5m"/>
                                 </connections>
@@ -265,23 +275,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gT-nc-ESo">
-                                <rect key="frame" x="250" y="335" width="100" height="30"/>
+                                <rect key="frame" x="200" y="335" width="200" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="FvD-eF-oD1"/>
+                                    <constraint firstAttribute="width" constant="200" id="FvD-eF-oD1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDQ-wR-G0q">
                                 <rect key="frame" x="273" y="441" width="55" height="30"/>
-                                <state key="normal" title="Sign Up"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.93725490196078431" green="0.41568627450980389" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="onSignUpButtonPressed:" destination="47O-ls-IfI" eventType="touchUpInside" id="fKe-sR-2UV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pam-FV-L3Z">
                                 <rect key="frame" x="240" y="550" width="120" height="30"/>
-                                <state key="normal" title="I have an account"/>
+                                <state key="normal" title="I have an account">
+                                    <color key="titleColor" red="0.93725490196078431" green="0.41568627450980389" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="e8o-bd-c5q" kind="unwind" unwindAction="unwindToThisViewController:" id="dAR-um-E5L"/>
                                 </connections>
@@ -290,20 +304,20 @@
                                 <rect key="frame" x="178" y="67" width="244" height="141"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cif-Ng-iob">
-                                <rect key="frame" x="250" y="298" width="100" height="30"/>
+                                <rect key="frame" x="200" y="298" width="200" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="zNa-cr-AX9"/>
+                                    <constraint firstAttribute="width" constant="200" id="zNa-cr-AX9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nu8-qH-pOx">
-                                <rect key="frame" x="250" y="373" width="100" height="30"/>
+                                <rect key="frame" x="200" y="373" width="200" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="WFJ-fA-aXS"/>
+                                    <constraint firstAttribute="width" constant="200" id="WFJ-fA-aXS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -445,6 +459,6 @@
         <image name="picture" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jXa-n0-kj4"/>
+        <segue reference="FxJ-JT-f75"/>
     </inferredMetricsTieBreakers>
 </document>

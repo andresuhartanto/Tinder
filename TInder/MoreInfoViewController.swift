@@ -47,8 +47,7 @@ class MoreInfoViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        DataService.usersRef.child(User.currentUserUid).child("profile_photo").observeEventType(.ChildAdded, withBlock: { (snapshot) in
-            print("photo \(snapshot.key)")
+        DataService.usersRef.child(User.currentUserUid).child("profile_photo").observeEventType(.Value, withBlock: { (snapshot) in
             
             
             if let photoURL = snapshot.value as? String {
@@ -125,20 +124,13 @@ class MoreInfoViewController: UIViewController, UIImagePickerControllerDelegate,
                     print("Error uploading: \(error)")
                     return
                 }
-                /**save image to firebase database*/
                 let fullurl = metadata!.downloadURL()!.absoluteString
-                print("fulurl \(metadata!.downloadURL()!.absoluteString)")
-                
-                let imageDict = ["profile_photo_url":fullurl]
-                //build a new root node called tweets
+
                 let imageRef = DataService.usersRef.child(User.currentUserUid).child("profile_photo")
-                //underneath the root, there is text,created_at,userUID
-                imageRef.setValue(imageDict)
+                imageRef.setValue(fullurl)
                 
-                // Caching the image
                 SDImageCache.sharedImageCache().storeImage(pickedImage, forKey: fullurl)
                 
-                /**/
         }
         
     }
