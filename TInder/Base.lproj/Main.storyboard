@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="TInder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,140 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Qe-bc-6xh">
+                                <rect key="frame" x="272" y="322" width="56" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-e6-kGu">
+                                <rect key="frame" x="258" y="360" width="84" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8M-2x-Qqa">
+                                <rect key="frame" x="277" y="428" width="47" height="30"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="onSignInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j6S-GJ-q8S"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tinder 1x" translatesAutoresizingMaskIntoConstraints="NO" id="Jnb-dd-uEJ">
+                                <rect key="frame" x="178" y="67" width="244" height="141"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jn8-CE-bbb">
+                                <rect key="frame" x="220" y="550" width="161" height="30"/>
+                                <state key="normal" title="Don't have an account?"/>
+                                <connections>
+                                    <segue destination="47O-ls-IfI" kind="presentation" id="w0b-OI-D5m"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zud-e6-kGu" firstAttribute="top" secondItem="9Qe-bc-6xh" secondAttribute="bottom" constant="8" id="2xv-bs-y1x"/>
+                            <constraint firstItem="Zud-e6-kGu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Kw-bB-LK5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jn8-CE-bbb" secondAttribute="bottom" constant="20" id="5R0-NA-W5h"/>
+                            <constraint firstItem="Jn8-CE-bbb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CBP-D5-y8Q"/>
+                            <constraint firstItem="Jnb-dd-uEJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="Fzg-FD-wad"/>
+                            <constraint firstItem="9Qe-bc-6xh" firstAttribute="top" secondItem="Jnb-dd-uEJ" secondAttribute="bottom" constant="114" id="IzD-LI-etq"/>
+                            <constraint firstItem="Jnb-dd-uEJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MOM-q9-urV"/>
+                            <constraint firstItem="J8M-2x-Qqa" firstAttribute="top" secondItem="Zud-e6-kGu" secondAttribute="bottom" constant="38" id="P6q-hx-hFS"/>
+                            <constraint firstItem="J8M-2x-Qqa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a5j-CY-qGF"/>
+                            <constraint firstItem="9Qe-bc-6xh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c9Q-c8-Uca"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="9Qe-bc-6xh" id="oRp-Vk-xAM"/>
+                        <outlet property="passwordTextField" destination="Zud-e6-kGu" id="nup-Aw-ACU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="YaS-TS-mHD">
+            <objects>
+                <viewController id="47O-ls-IfI" customClass="SignUpViewController" customModule="TInder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TSI-bQ-rb6"/>
+                        <viewControllerLayoutGuide type="bottom" id="J6x-MD-RfP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Sl-gl-xFf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gT-nc-ESo">
+                                <rect key="frame" x="250" y="335" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FvD-eF-oD1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDQ-wR-G0q">
+                                <rect key="frame" x="273" y="441" width="55" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="onSignUpButtonPressed:" destination="47O-ls-IfI" eventType="touchUpInside" id="fKe-sR-2UV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pam-FV-L3Z">
+                                <rect key="frame" x="240" y="550" width="120" height="30"/>
+                                <state key="normal" title="I have an account"/>
+                                <connections>
+                                    <segue destination="e8o-bd-c5q" kind="unwind" unwindAction="unwindToThisViewController:" id="dAR-um-E5L"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tinder 1x" translatesAutoresizingMaskIntoConstraints="NO" id="oAs-Ch-g5l">
+                                <rect key="frame" x="178" y="67" width="244" height="141"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cif-Ng-iob">
+                                <rect key="frame" x="250" y="298" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="zNa-cr-AX9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nu8-qH-pOx">
+                                <rect key="frame" x="250" y="373" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WFJ-fA-aXS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oAs-Ch-g5l" firstAttribute="centerX" secondItem="7Sl-gl-xFf" secondAttribute="centerX" id="8tr-QT-FXs"/>
+                            <constraint firstItem="nu8-qH-pOx" firstAttribute="centerX" secondItem="7Sl-gl-xFf" secondAttribute="centerX" id="BOj-ig-ngN"/>
+                            <constraint firstItem="5gT-nc-ESo" firstAttribute="top" secondItem="Cif-Ng-iob" secondAttribute="bottom" constant="7" id="HOn-GP-beF"/>
+                            <constraint firstItem="nu8-qH-pOx" firstAttribute="top" secondItem="5gT-nc-ESo" secondAttribute="bottom" constant="8" id="Mek-en-8Hc"/>
+                            <constraint firstItem="JDQ-wR-G0q" firstAttribute="centerX" secondItem="7Sl-gl-xFf" secondAttribute="centerX" id="Vwa-PJ-pRY"/>
+                            <constraint firstItem="J6x-MD-RfP" firstAttribute="top" secondItem="pam-FV-L3Z" secondAttribute="bottom" constant="20" id="XdV-fn-nGf"/>
+                            <constraint firstItem="Cif-Ng-iob" firstAttribute="centerX" secondItem="7Sl-gl-xFf" secondAttribute="centerX" id="YS8-zr-zJg"/>
+                            <constraint firstItem="5gT-nc-ESo" firstAttribute="centerX" secondItem="7Sl-gl-xFf" secondAttribute="centerX" id="Zr8-Tb-S9F"/>
+                            <constraint firstItem="oAs-Ch-g5l" firstAttribute="top" secondItem="TSI-bQ-rb6" secondAttribute="bottom" constant="47" id="aea-zR-nE8"/>
+                            <constraint firstItem="pam-FV-L3Z" firstAttribute="centerX" secondItem="7Sl-gl-xFf" secondAttribute="centerX" id="dWO-3N-bw0"/>
+                            <constraint firstItem="Cif-Ng-iob" firstAttribute="top" secondItem="oAs-Ch-g5l" secondAttribute="bottom" constant="90" id="enA-kQ-W8d"/>
+                            <constraint firstItem="JDQ-wR-G0q" firstAttribute="top" secondItem="nu8-qH-pOx" secondAttribute="bottom" constant="38" id="rmq-Zx-FMm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="5gT-nc-ESo" id="8jK-Ks-qyx"/>
+                        <outlet property="nameTextField" destination="Cif-Ng-iob" id="Gsx-HW-xvG"/>
+                        <outlet property="passwordTextField" destination="nu8-qH-pOx" id="9Sd-3E-ahl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWr-Zz-Jnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="e8o-bd-c5q" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="858"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Tinder 1x" width="244" height="141"/>
+    </resources>
 </document>

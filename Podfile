@@ -7,4 +7,8 @@ target 'TInder' do
 
   # Pods for TInder
 
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+
 end
