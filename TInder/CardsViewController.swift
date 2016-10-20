@@ -13,6 +13,7 @@ class CardsViewController: UIViewController {
     
     var cards = [User]()
     
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -20,6 +21,8 @@ class CardsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cardView.layer.cornerRadius = 25
         
         loadUsers()
 
@@ -41,8 +44,9 @@ class CardsViewController: UIViewController {
         for card in cards{
         let photoURL = card.photoURL
         self.imageView.sd_setImageWithURL(NSURL(string: photoURL!))
+            self.imageView.clipsToBounds = true
         self.nameLabel.text = card.name
-        self.ageLabel.text = String(card.age)
+        self.ageLabel.text = "\(card.age)"
         self.descriptionLabel.text = card.description
         }
     }
