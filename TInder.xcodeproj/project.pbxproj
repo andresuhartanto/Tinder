@@ -18,6 +18,8 @@
 		65056A7C1DB86C23000F2A3A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65056A7B1DB86C23000F2A3A /* DataService.swift */; };
 		65056A7E1DB87332000F2A3A /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65056A7D1DB87332000F2A3A /* CardsViewController.swift */; };
 		65056A811DB876B3000F2A3A /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65056A801DB876B3000F2A3A /* MoreInfoViewController.swift */; };
+		65056A831DB89140000F2A3A /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65056A821DB89140000F2A3A /* StorageService.swift */; };
+		65056A851DB898B9000F2A3A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65056A841DB898B9000F2A3A /* ProfileViewController.swift */; };
 		E455CCA27F0A8E0D8DE5DCA5 /* Pods_TInder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062D81E82078FEDEDC536B7B /* Pods_TInder.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		65056A7B1DB86C23000F2A3A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		65056A7D1DB87332000F2A3A /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		65056A801DB876B3000F2A3A /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		65056A821DB89140000F2A3A /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		65056A841DB898B9000F2A3A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C970C2E4D13D30CCD0064B0C /* Pods-TInder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TInder.release.xcconfig"; path = "Pods/Target Support Files/Pods-TInder/Pods-TInder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +80,7 @@
 				65056A601DB85E3B000F2A3A /* AppDelegate.swift */,
 				65056A7D1DB87332000F2A3A /* CardsViewController.swift */,
 				65056A801DB876B3000F2A3A /* MoreInfoViewController.swift */,
+				65056A841DB898B9000F2A3A /* ProfileViewController.swift */,
 				65056A7A1DB86B4A000F2A3A /* Models */,
 				65056A771DB86638000F2A3A /* Login & Sign Up */,
 				65056A7F1DB87345000F2A3A /* Storyboards */,
@@ -89,6 +94,7 @@
 			children = (
 				65056A671DB85E3B000F2A3A /* Assets.xcassets */,
 				65056A7B1DB86C23000F2A3A /* DataService.swift */,
+				65056A821DB89140000F2A3A /* StorageService.swift */,
 				65056A6C1DB85E3B000F2A3A /* Info.plist */,
 				65056A721DB864E1000F2A3A /* GoogleService-Info.plist */,
 			);
@@ -266,6 +272,8 @@
 				65056A7E1DB87332000F2A3A /* CardsViewController.swift in Sources */,
 				65056A811DB876B3000F2A3A /* MoreInfoViewController.swift in Sources */,
 				65056A631DB85E3B000F2A3A /* LoginViewController.swift in Sources */,
+				65056A831DB89140000F2A3A /* StorageService.swift in Sources */,
+				65056A851DB898B9000F2A3A /* ProfileViewController.swift in Sources */,
 				65056A611DB85E3B000F2A3A /* AppDelegate.swift in Sources */,
 				65056A7C1DB86C23000F2A3A /* DataService.swift in Sources */,
 			);

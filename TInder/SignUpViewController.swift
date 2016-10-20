@@ -40,7 +40,15 @@ class SignUpViewController: UIViewController {
                 NSUserDefaults.standardUserDefaults().setObject((user.uid), forKey: "userUID")
                 User.signIn(user.uid)
                 
-                
+                FIRAuth.auth()?.currentUser?.sendEmailVerificationWithCompletion({ (error) in
+                    print("verification email sent")
+                    let alert = UIAlertController(title: "Account Created", message: "Please verify your email by confirming the sent link.", preferredStyle: UIAlertControllerStyle.Alert)
+                    let actionButton = UIAlertAction(title: "Ok", style: .Default, handler: { (actionButton) in
+                        self.performSegueWithIdentifier("MoreInfoSegue", sender: nil)
+                    })
+                    alert.addAction(actionButton)
+                    self.presentViewController(alert, animated: true, completion: nil)
+                })
                 
                 let currentUserRef = DataService.usersRef.child(user.uid)
                 let userDict = ["email": email, "username": name]
@@ -61,15 +69,6 @@ class SignUpViewController: UIViewController {
             }
         })
         
-        FIRAuth.auth()?.currentUser?.sendEmailVerificationWithCompletion({ (error) in
-            print("verification email sent")
-            let alert = UIAlertController(title: "Account Created", message: "Please verify your email by confirming the sent link.", preferredStyle: UIAlertControllerStyle.Alert)
-            let actionButton = UIAlertAction(title: "Ok", style: .Default, handler: { (actionButton) in
-                self.performSegueWithIdentifier("MoreInfoSegue", sender: nil)
-            })
-            alert.addAction(actionButton)
-            self.presentViewController(alert, animated: true, completion: nil)
-        })
         
         
         

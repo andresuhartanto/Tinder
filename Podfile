@@ -10,5 +10,8 @@ target 'TInder' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'SDWebImage', '~>3.8’
+pod 'Koloda', '~> 3.1.2'
 
 end
