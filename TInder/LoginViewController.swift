@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
         FIRAuth.auth()?.signInWithEmail(email, password: password) { (user, error) in
             if let person = user {
                 if !person.emailVerified{
-                    let alertVC = UIAlertController(title: "Error", message: "Sorry. Your email address has not yet been verified. Do you want us to send another verification email to \(self.emailTextField.text).", preferredStyle: .Alert)
+                    let alertVC = UIAlertController(title: "Error", message: "Sorry. Your email address has not yet been verified. Do you want us to send another verification email to \(self.emailTextField.text!).", preferredStyle: .Alert)
                     let alertActionOkay = UIAlertAction(title: "Okay", style: .Default) {
                         (_) in
                         person.sendEmailVerificationWithCompletion(nil)
