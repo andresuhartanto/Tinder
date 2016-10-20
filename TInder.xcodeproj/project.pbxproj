@@ -16,6 +16,8 @@
 		65056A761DB8662C000F2A3A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65056A751DB8662C000F2A3A /* SignUpViewController.swift */; };
 		65056A791DB86B42000F2A3A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65056A781DB86B42000F2A3A /* User.swift */; };
 		65056A7C1DB86C23000F2A3A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65056A7B1DB86C23000F2A3A /* DataService.swift */; };
+		65056A7E1DB87332000F2A3A /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65056A7D1DB87332000F2A3A /* CardsViewController.swift */; };
+		65056A811DB876B3000F2A3A /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65056A801DB876B3000F2A3A /* MoreInfoViewController.swift */; };
 		E455CCA27F0A8E0D8DE5DCA5 /* Pods_TInder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062D81E82078FEDEDC536B7B /* Pods_TInder.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		65056A751DB8662C000F2A3A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		65056A781DB86B42000F2A3A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		65056A7B1DB86C23000F2A3A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		65056A7D1DB87332000F2A3A /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		65056A801DB876B3000F2A3A /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		C970C2E4D13D30CCD0064B0C /* Pods-TInder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TInder.release.xcconfig"; path = "Pods/Target Support Files/Pods-TInder/Pods-TInder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,11 +74,11 @@
 			isa = PBXGroup;
 			children = (
 				65056A601DB85E3B000F2A3A /* AppDelegate.swift */,
+				65056A7D1DB87332000F2A3A /* CardsViewController.swift */,
+				65056A801DB876B3000F2A3A /* MoreInfoViewController.swift */,
 				65056A7A1DB86B4A000F2A3A /* Models */,
 				65056A771DB86638000F2A3A /* Login & Sign Up */,
-				65056A641DB85E3B000F2A3A /* Main.storyboard */,
-				65056A671DB85E3B000F2A3A /* Assets.xcassets */,
-				65056A691DB85E3B000F2A3A /* LaunchScreen.storyboard */,
+				65056A7F1DB87345000F2A3A /* Storyboards */,
 				65056A741DB864F2000F2A3A /* Supporting Files */,
 			);
 			path = TInder;
@@ -83,6 +87,7 @@
 		65056A741DB864F2000F2A3A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				65056A671DB85E3B000F2A3A /* Assets.xcassets */,
 				65056A7B1DB86C23000F2A3A /* DataService.swift */,
 				65056A6C1DB85E3B000F2A3A /* Info.plist */,
 				65056A721DB864E1000F2A3A /* GoogleService-Info.plist */,
@@ -105,6 +110,15 @@
 				65056A781DB86B42000F2A3A /* User.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		65056A7F1DB87345000F2A3A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				65056A641DB85E3B000F2A3A /* Main.storyboard */,
+				65056A691DB85E3B000F2A3A /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		BAF782051B6C681D516AC6F4 /* Frameworks */ = {
@@ -249,6 +263,8 @@
 			files = (
 				65056A791DB86B42000F2A3A /* User.swift in Sources */,
 				65056A761DB8662C000F2A3A /* SignUpViewController.swift in Sources */,
+				65056A7E1DB87332000F2A3A /* CardsViewController.swift in Sources */,
+				65056A811DB876B3000F2A3A /* MoreInfoViewController.swift in Sources */,
 				65056A631DB85E3B000F2A3A /* LoginViewController.swift in Sources */,
 				65056A611DB85E3B000F2A3A /* AppDelegate.swift in Sources */,
 				65056A7C1DB86C23000F2A3A /* DataService.swift in Sources */,
